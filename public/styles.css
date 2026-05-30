@@ -1,0 +1,435 @@
+:root {
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2c2c2c;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --accent-blue: #5865f2;
+    --accent-green: #43b581;
+    --accent-red: #f04747;
+    --border-color: #404249;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.discord-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--accent-blue);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-login {
+    padding: 8px 24px;
+    background-color: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+
+/* Sections */
+.section {
+    grid-column: 1;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+/* Configuration Section */
+.config-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.config-box label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.input-field {
+    padding: 12px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.1);
+}
+
+.btn-save {
+    padding: 10px 20px;
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-save:hover {
+    background-color: #4752c4;
+    transform: translateY(-2px);
+}
+
+/* Usernames Grid */
+.usernames-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.username-item {
+    padding: 16px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.username-item:hover {
+    background-color: rgba(88, 101, 242, 0.1);
+    border-color: var(--accent-blue);
+}
+
+.username-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-available .username-text {
+    color: var(--accent-green);
+}
+
+/* Control Section */
+.control-container {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.starting-letter {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.starting-letter label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.select-field {
+    padding: 10px 12px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.select-field:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.btn-start {
+    flex: 2;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+.btn-start:active {
+    transform: translateY(0);
+}
+
+/* Statistics Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    padding: 20px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.stat-number.stat-available {
+    color: var(--accent-green);
+}
+
+.stat-number.stat-taken {
+    color: var(--accent-red);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.availability-percentage {
+    text-align: center;
+    padding: 16px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#percentage {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+
+/* Results Section */
+.results-placeholder {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.results-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.result-item {
+    padding: 16px;
+    background-color: var(--bg-tertiary);
+    border: 2px solid var(--accent-green);
+    border-radius: 4px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-item .username-text {
+    color: var(--accent-green);
+    font-size: 14px;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.live-checking {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.checking-status {
+    font-size: 14px;
+    color: var(--accent-blue);
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(88, 101, 242, 0.1);
+    border-radius: 4px;
+    animation: pulse 2s infinite;
+}
+
+.checking-status.checking {
+    color: var(--accent-green);
+    background-color: rgba(67, 181, 129, 0.1);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-column: 1;
+        grid-row: auto;
+        position: static;
+    }
+
+    .usernames-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .results-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .control-container {
+        flex-direction: column;
+    }
+
+    .usernames-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .results-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
